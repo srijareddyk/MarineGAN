@@ -7,8 +7,6 @@ This project implements a Deep Convolutional Generative Adversarial Network (DCG
 
 The project explores various training strategies, implements systematic hyperparameter optimization, and includes advanced features such as latent space interpolation and experiment tracking with Weights & Biases.
 
----
-
 ## Extra Criteria Implemented
 
 This project fulfills:
@@ -60,7 +58,6 @@ This project fulfills:
    - Normalize pixel values to [-1, 1] range for GAN training
    - Batch size: 64 images per batch
 
----
 
 ## Model Architecture
 
@@ -236,9 +233,7 @@ After looking at the the loss curves and generated samples, I assumed the follow
    By epoch 200, discriminator LR had decayed to minimum (0.00005) but the generator LR remained at 0.0002 which is an imbalance in learning rate. Generator may have "drifted" without strong discriminator feedback
 
 3. **Lack of Data Augmentation:**
-    I used a fixed dataset of ~4,000 images. The generator could have memorized common patterns.
-
-What I understod is that more training does not necessarily lead to a better model. There exists an optimal training duration (around 80 epochs for this dataset), beyond which quality can degrade. 
+    I used a fixed dataset of ~4,000 images. The generator could have memorized common patterns.What I understod is that more training does not necessarily lead to a better model. There exists an optimal training duration (around 80 epochs for this dataset), beyond which quality can degrade. 
 ---
 
 ### Final Training Recommendation
@@ -350,7 +345,7 @@ The latent space exploration demonstrates that the generator learned a smooth, c
 
 ---
 
-## Challenges and Solutions
+## Challenges
 
 ### Challenge 1: Poor Initial Image Quality
 
